@@ -179,8 +179,84 @@ print(f"Resultado da diferença: {resultado_diferenca}")
 # #### try-except e if
 
 # 21: Conversor de Temperatura
+
+try:
+    elcius = float(input("Digite a temperatura em celcius: "))
+    fahrenheit = (celcius * (9 / 5)) + 32
+
+    print(f"{celcius}°C é igual a {fahrenheit}°F")
+except ValueError:
+    print("Por favor, digite um valor válido para a temperatura.")
+
 # 22: Verificador de Palíndromo
+
+entrada = input("Digite uma palavra ou frase: ")
+
+if isinstance(entrada, str):
+    formatado = entrada.replace(" ", "").lower()
+    if formatado == formatado[::-1]: # A sintaxe geral de fatiamento (slice): string[inicio:fim:passo]
+        print("É um palíndromo.")
+    else:
+        print("Não é um palíndromo.")
+else:
+    print("Entrada inválida. Por favor, digite uma palavra ou frase.")
+
+
 # 23: Calculadora Simples
+
+try:
+    numero1 = float(input("Digite o primeiro número: "))
+    numero2 = float(input("Digite o segundo número: "))
+    operador = input("Digite o operador (+, -, *, /): ")
+
+    if operador == "+":
+        resultado = numero1 + numero2
+    elif operador == "-":
+        resultado = numero1 - numero2
+    elif operador == "*":
+        resultado = numero1 * numero2
+    elif operador == "/":
+        resultado = numero1 / numero2
+    else:
+        print("Operador inválido.")
+    print(f"{numero1} {operador} {numero2} = {resultado}")
+except ZeroDivisionError:
+    print("Erro de divisão por zero.")
+except ValueError:
+    print("Erro: Entrada inválida. Certifique-se de inserir números.") 
+
 # 24: Classificador de Números
+
+try:
+    numero = int(input("Digite um número: "))
+
+    if numero > 0:
+        print("Positivo.")
+    elif numero < 0:
+        print("Negativo.")
+    else:
+        print("Zero.")
+
+    if (numero % 2) == 0:
+        print("Par")
+    else:
+        print("Impar")
+
+except ValueError:
+    print("Entrada inválida. Por favor, digite um número.")
+
+
 # 25: Conversão de Tipo com Validação
 
+try:
+    numeros = input("Digite uma lista de números separados por virgula: ")
+    lista_numeros_string = numeros.split(",")
+    lista_numeros_inteiros = []
+
+    for numero in lista_numeros_string:
+        if isinstance(numero, int):
+            lista_numeros_inteiros.append(int(numero.strip()))
+    
+    print(f"Lista de inteiros: {lista_numeros_inteiros}")
+except ValueError:
+    print("Erro: certifique-se de que todos os elementos são números inteiros válidos.")
