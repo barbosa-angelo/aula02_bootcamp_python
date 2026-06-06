@@ -82,22 +82,58 @@ fahrenheit = (celcius * (9 / 5)) + 32
 
 print(f"{celcius}°C é igual a {fahrenheit}°F")
 
-
 # 10. Escreva um programa que calcule a área de um círculo, recebendo o raio como entrada.
 
 raio = float(input("Digite o raio do circulo: "))
 
 area_circulo = math.pi * (raio ** 2)
 
-print(f"A área do circulo é: {area_circulo} m²")
+print(f"A área do circulo é: {area_circulo:.2f} m²")
 
 # #### Strings (`str`)
 
 # 11. Escreva um programa que receba uma string do usuário e a converta para maiúsculas.
+
+texto = input("Digite um texto qualquer: ")
+
+texto_maiuscula = texto.upper()
+
+print(f"Texto em maiúsculas: {texto_maiuscula}")
+
 # 12. Crie um programa que receba o nome completo do usuário e imprima o nome com todas as letras minúsculas.
+
+nome_completo = input("Digite seu nome completo: ")
+
+nome_minusculas = nome_completo.lower()
+
+print(f"Nome em minúsculas: {nome_minusculas}")
+
 # 13. Desenvolva um programa que peça ao usuário para inserir uma frase e, em seguida, imprima esta frase sem espaços em branco no início e no final.
+
+frase = input("Digite uma frase: ")
+
+frase_sem_espacos = frase.strip()
+
+print(f"Frase sem espaços vázios no início e no final: {frase_sem_espacos}")
+
 # 14. Faça um programa que peça ao usuário para digitar uma data no formato "dd/mm/aaaa" e, em seguida, imprima o dia, o mês e o ano separadamente.
+
+data = input("Digite uma data no formato (DD/MM/AAAA): ")
+
+dia, mes, ano = data.split("/")
+
+print(f"Dia: {dia}")
+print(f"Mêa: {mes}")
+print(f"Ano: {ano}")
+
 # 15. Escreva um programa que concatene duas strings fornecidas pelo usuário.
+
+parte1 = input("Digite um texto: ")
+parte2 = input("Digite outro texto: ")
+
+texto_concatenado = parte1 + parte2
+
+print(f"Texto concatenado: {texto_concatenado}")
 
 # #### Booleanos (`bool`)
 
